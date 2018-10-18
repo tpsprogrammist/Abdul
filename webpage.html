@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>Web Site</title>
     <style>
         header{
@@ -27,58 +30,60 @@
             align-content: center;
         }
 
+        footer{
+            height: 25%;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="bg-dark">
+        <header class="badge-secondary">
             <div class="logo">
                 <img src="img/profile.png" width="15%" alt="">
 
                 </div>
-            <div class="item badge-danger">$$$</div>
-            <div class="login badge-info">###</div>
+            <div class="item badge-danger">$$$ Header</div>
+            <div class="login badge-info">### Bootstrap 4 only</div>
             <!-- hamburger menu -->
 
-            <nav class="navbar navbar-dark bg-dark">
-                    <!-- <a class="navbar-brand" href="#">Never expand</a> -->
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navmenu d-lg-none d-md-none">
+                <nav class="navbar navbar-dark bg-dark .d-md-none .d-lg-none">
+                    <!-- <a class="navbar-brand" href="https://getbootstrap.com/docs/4.0/examples/navbars/#">Never expand</a> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="true" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
               
-                    <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+                    <div class="navbar-collapse collapse " id="navbarsExample01" style="">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#">Menu 1 <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
+                          <a class="nav-link" href="#">2</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Disabled</a>
+                          <a class="nav-link" href="#">3</a>
                         </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                          <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">4</a>
+                          </li>
                       </ul>
                       <form class="form-inline my-2 my-md-0">
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                       </form>
                     </div>
                   </nav>
+            </div>
+              
 
         </header>
 <!-- Sidebar -->
 
 <div class="container-fluid h-100">
         <div class="row h-100">
-            <aside class="col-12 col-md-2 p-0 bg-primary">
+            <aside class="col-12 col-md-2 p-0 bg-dark .d-sm-none .d-md-block">
                 <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start py-2">
                     <div class="collapse navbar-collapse">
                         <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
@@ -86,20 +91,18 @@
                                 <a class="nav-link pl-0 text-nowrap" href="#"><i class="fa fa-bullseye fa-fw"></i> <span class="font-weight-bold">Brand</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Link</span></a>
+                                <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Menu 1</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Link</span></a>
+                                <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">2</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-md-inline">Link</span></a>
+                                <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-md-inline">3</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-0" href="#"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Link</span></a>
+                                <a class="nav-link pl-0" href="#"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">4</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Link</span></a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -165,7 +168,7 @@
 
 
 
-        <footer>
+        <footer class="bg-success">
 
             <p>Footer</p>
 
